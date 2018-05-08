@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Dogadaj" table="DOGADAJ">
+
+		<id name="dogadaj_id" column="dogadaj_id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property name="ime_dogadaj" type="string">
+			<column name="ime_dogadaj" not-null="true" />
+		</property>
+		
+		<property name="vrijednost" type="java.lang.Integer">
+			<column name="vrijednost" />
+		</property>
+		
+		 <set name="sviDogadajiTogTipa" table="IGRAC_UTAKMICA_DOGADAJ" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dogadaj" not-null="true" />
+            </key>
+            <one-to-many class="IgracUtakmicaDogadaj" />
+        </set>
+	</class>
+
+</hibernate-mapping>

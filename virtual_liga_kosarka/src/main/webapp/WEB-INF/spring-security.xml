@@ -1,0 +1,40 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    
+
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/osobnaAdmin/**" access="hasRole('admin')" />
+		<intercept-url pattern="/osobnaSlOsoba/**" access="hasAnyRole('admin','sluzbena_osoba')" />
+		<intercept-url pattern="/osobnaTehKomisija/**" access="hasAnyRole('admin','tehnicka_komisija')" />
+		<intercept-url pattern="/osobnaNatjecatelj/**" access="hasAnyRole('admin','natjecatelj')" />
+
+		
+
+		<access-denied-handler error-page="/403" />
+		<form-login 
+		    login-page="/prijava" 
+		    default-target-url="/osobnaStranica" 
+			authentication-failure-url="/prijava?error" 
+			username-parameter="username"
+			password-parameter="password" />
+		<logout logout-success-url="/prijava?logout"  />
+
+		<csrf/>
+	</http>
+	
+
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="myDataSource"
+				users-by-username-query=
+					"select korisnicko_ime as username,lozinka as password,case when korisnicko_ime is null then false else true end as enabled from korisnik where korisnicko_ime=?"
+				authorities-by-username-query=
+					"select korisnicko_ime as username, razina_prava_vrsta as role from korisnik join razina_prava on korisnik.razina_prava = razina_prava.razina_prava_id where korisnicko_ime =?  " />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

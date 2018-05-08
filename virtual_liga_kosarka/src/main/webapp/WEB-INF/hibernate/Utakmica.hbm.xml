@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Utakmica" table="UTAKMICA">
+
+		<id name="utakmica_id" column="utakmica_id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+
+		<many-to-one name="ekipa_domacin" class="Ekipa" fetch="select">
+			<column name="ekipa_domacin" />
+		</many-to-one>
+		<many-to-one name="ekipa_gost" class="Ekipa" fetch="select">
+			<column name="ekipa_gost" />
+		</many-to-one>
+
+		<property name="odigrana" type="java.lang.Boolean">
+			<column name="odigrana" not-null="true" />
+		</property>
+
+		<many-to-one name="igrac_utakmice" class="Igrac" fetch="select">
+			<column name="igrac_utakmice" />
+		</many-to-one>
+
+
+		<set name="sviDogadajiNaUtakmici" table="IGRAC_UTAKMICA_DOGADAJ"
+			inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="utakmica" not-null="true" />
+			</key>
+			<one-to-many class="IgracUtakmicaDogadaj" />
+		</set>
+	</class>
+</hibernate-mapping>

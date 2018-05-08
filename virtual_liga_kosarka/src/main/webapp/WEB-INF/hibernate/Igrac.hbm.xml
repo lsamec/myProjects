@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Igrac" table="IGRAC">
+
+		<id name="igrac_id" column="igrac_id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+
+		<many-to-one name="ekipa" class="Ekipa" fetch="select">
+			<column name="ekipa" />
+		</many-to-one>
+		<property name="ime_igrac" type="string">
+			<column name="ime_igrac" not-null="true" />
+		</property>
+		<property name="prezime_igrac" type="string">
+			<column name="prezime_igrac" not-null="true" />
+		</property>
+		<property name="broj_dresa" type="string">
+			<column name="broj_dresa" not-null="true" />
+		</property>
+		<many-to-one name="pozicija" class="Pozicija" fetch="select">
+			<column name="pozicija" />
+		</many-to-one>
+		<property name="vrijednost" type="string">
+			<column name="vrijednost" />
+		</property>
+		<property name="uk_bodovi" type="string">
+			<column name="uk_bodovi" />
+		</property>
+
+		<set name="sviDogadajiIgraca" table="IGRAC_UTAKMICA_DOGADAJ"
+			inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="igrac" not-null="true" />
+			</key>
+			<one-to-many class="IgracUtakmicaDogadaj" />
+		</set>
+
+		<set name="sviNatjecateljiUCijojJeVirtEkipi" table="IGRAC_VIRTUALNA_EKIPA"
+			inverse="false" lazy="true" fetch="select" cascade="all">
+			<key>
+				<column name="igrac_id" not-null="true" />
+			</key>
+			<many-to-many entity-name="fer.opp.vlk.model.Natjecatelj">
+				<column name="korisnik_id" not-null="true" />
+			</many-to-many>
+		</set>
+
+		<set name="sveUtakmiceGdjeJeNajboljiIgrac" table="UTAKMICA"
+			inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="igrac_utakmice" not-null="true" />
+			</key>
+			<one-to-many class="Utakmica" />
+		</set>
+	</class>
+
+</hibernate-mapping>

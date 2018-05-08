@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Konfiguracija" table="KONFIGURACIJA">
+
+		<id name="konfiguracija_id" column="konfiguracija_id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property name="proracun" type="java.lang.Integer">
+			<column name="proracun" not-null="true" />
+		</property>
+		<property name="postignut_kos" type="java.lang.Integer">
+			<column name="postignut_kos" not-null="true" />
+		</property>
+		<property name="kos_iz_slobodnog" type="java.lang.Integer">
+			<column name="kos_iz_slobodnog" not-null="true" />
+		</property>
+		<property name="trica" type="java.lang.Integer">
+			<column name="trica" not-null="true" />
+		</property>
+		<property name="skok" type="java.lang.Integer">
+			<column name="skok" not-null="true" />
+		</property>		
+		<property name="oduzimanje_lopte" type="java.lang.Integer">
+			<column name="oduzimanje_lopte" not-null="true" />
+		</property>
+		<property name="promaseno_slobodno" type="java.lang.Integer">
+			<column name="promaseno_slobodno" not-null="true" />
+		</property>
+		<property name="promasen_za_dva" type="java.lang.Integer">
+			<column name="promasen_za_dva" not-null="true" />
+		</property>
+		<property name="promasena_trica" type="java.lang.Integer">
+			<column name="promasena_trica" not-null="true" />
+		</property>
+		<property name="tehnicka" type="java.lang.Integer">
+			<column name="tehnicka" not-null="true" />
+		</property>
+		<property name="osobna" type="java.lang.Integer">
+			<column name="osobna" not-null="true" />
+		</property>
+		<property name="iskljucenje" type="java.lang.Integer">
+			<column name="iskljucenje" not-null="true" />
+		</property>
+		
+	</class>
+
+</hibernate-mapping>

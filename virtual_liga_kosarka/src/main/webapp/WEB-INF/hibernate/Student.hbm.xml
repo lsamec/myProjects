@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+  <class name="Student"  table="Student">
+        <id name="id" column="ID">
+            <generator class="native"/>
+        </id>
+       <property name="name" type="string">
+            <column name="NAME" length="10" not-null="true" />
+        </property>
+        <property name="age" type="integer">
+            <column name="AGE" not-null="true" />
+        </property>
+    </class>
+
+</hibernate-mapping>

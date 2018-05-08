@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Natjecatelj" table="NATJECATELJ">
+
+		<id name="korisnik_id" column="korisnik_id" type="java.lang.Integer">
+		</id>
+		<many-to-one name="podupire_ekipu" class="Ekipa" fetch="select" lazy="false">
+			<column name="podupire_ekipu" />
+		</many-to-one>
+
+		<property name="ime" type="string">
+			<column name="ime" length="50" not-null="true" />
+		</property>
+		<property name="prezime" type="string">
+			<column name="prezime" length="50" not-null="true" />
+		</property>
+		<property name="e_mail" type="string">
+			<column name="e_mail" not-null="true" />
+		</property>
+		<property name="naziv_virt_ekipe" type="string">
+			<column name="naziv_virt_ekipe" unique="true" not-null="true" />
+		</property>
+		<many-to-one name="drzava" class="Drzava" fetch="select" lazy="false">
+			<column name="drzava" />
+		</many-to-one>
+		<property name="bodovi_virt_ekipe" type="java.lang.Integer">
+			<column name="bodovi_virt_ekipe" not-null="true" />
+		</property>
+
+
+		<set name="igraciVirtualneEkipe" table="IGRAC_VIRTUALNA_EKIPA"
+			inverse="false" lazy="false" fetch="select" >
+			<key>
+				<column name="korisnik_id" not-null="true" />
+			</key>
+			<many-to-many entity-name="fer.opp.vlk.model.Igrac">
+				<column name="igrac_id" not-null="true" />
+			</many-to-many>
+		</set>
+
+	</class>
+
+</hibernate-mapping>

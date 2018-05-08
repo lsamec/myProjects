@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Ekipa" table="EKIPA">
+
+		<id name="ekipa_id" column="ekipa_id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property name="ime_ekipa" type="string">
+			<column name="ime_ekipa" not-null="true" />
+		</property>
+		<property name="bodovi" type="java.lang.Integer">
+			<column name="bodovi" not-null="true" />
+		</property>
+		<property name="pobjedene" type="java.lang.Integer">
+			<column name="pobjedene" not-null="true" />
+		</property>
+		<property name="izgubljene" type="java.lang.Integer">
+			<column name="izgubljene" not-null="true" />
+		</property>
+		<property name="nerjesene" type="java.lang.Integer">
+			<column name="nerjesene" not-null="true" />
+		</property>
+		
+		 <set name="igraciEkipe" table="IGRAC" 
+				inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="ekipa" not-null="true" />
+            </key>
+            <one-to-many class="Igrac" />
+        </set>
+        
+        <set name="natjecateljiKojiPodupiru" table="NATJECATELJ" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="podupire_ekipu" not-null="true" />
+            </key>
+            <one-to-many class="Natjecatelj" />
+        </set>
+        
+        <set name="jeGost" table="UTAKMICA" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ekipa_gost" not-null="true" />
+            </key>
+            <one-to-many class="Utakmica" />
+        </set>
+        
+        <set name="jeDomacin" table="UTAKMICA" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ekipa_domacin" not-null="true" />
+            </key>
+            <one-to-many class="Utakmica" />
+        </set>
+	</class>
+
+</hibernate-mapping>

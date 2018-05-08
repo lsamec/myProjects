@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Konfiguracija" table="KONFIGURACIJA">
+
+		<id name="konfiguracija_id" column="konfiguracija_id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<property name="proracun" type="java.lang.Integer">
+			<column name="proracun" />
+		</property>
+		<property name="status_simulatora" type="java.lang.Integer">
+			<column name="status_simulatora" />
+		</property>
+        <property name="odobren_konf" type="boolean">
+            <column name="odobren_konf" />
+        </property>
+        <property name="postoji_sastav_ekipa" type="boolean">
+            <column name="postoji_sastav_ekipa" />
+        </property>
+        <property name="igraci_ok" type="boolean">
+            <column name="igraci_ok" />
+        </property>
+        <property name="moze_sim" type="boolean">
+            <column name="moze_sim" />
+        </property>
+        <property name="odobrena_reg" type="boolean">
+            <column name="odobrena_reg" />
+        </property>
+        <property name="zapoceta_liga" type="boolean">
+            <column name="zapoceta_liga" />
+        </property>
+        <property name="just_a_konf_holder" type="boolean">
+            <column name="just_a_konf_holder" />
+        </property>
+	
+	</class>
+
+</hibernate-mapping>

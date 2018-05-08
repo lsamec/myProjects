@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fer.opp.vlk.model">
+
+	<class name="Korisnik" table="KORISNIK">
+
+		<id name="korisnik_id" column="korisnik_id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+
+		<property name="korisnicko_ime" type="string">
+			<column name="korisnicko_ime" length="50" not-null="true"
+				unique="true" />
+		</property>
+		<property name="lozinka" type="string">
+			<column name="lozinka" length="50" not-null="true" />
+		</property>
+		<many-to-one name="razina_prava" class="RazinaPrava"
+			fetch="select" lazy="false">
+			<column name="razina_prava" not-null="true" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
