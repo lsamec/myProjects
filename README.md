@@ -5,7 +5,7 @@ projects done in college period on FER, Zagreb
 	when chosen basketball players are good registered players get points and compete with other;
 	Maven project, uses H2 database
 
--project grass_eaters was done as a part of undergraduate seminar, it is imitation of http://math.hws.edu/eck/jsdemo/jsGeneticAlgorithm.html;
+-project grass_eaters was done as a part of undergraduate seminar; it is imitation of http://math.hws.edu/eck/jsdemo/jsGeneticAlgorithm.html;
 	you have many agents - "grass eaters" on a field trying to eat as much grass as possible, competing with fellow agents;
 	they evolve their ability to eat as much grass with genetic algorithm
 	
