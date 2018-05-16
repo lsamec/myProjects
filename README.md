@@ -8,7 +8,3 @@ projects done in college period on FER, Zagreb
 -project grass_eaters was done as a part of undergraduate seminar; it is imitation of http://math.hws.edu/eck/jsdemo/jsGeneticAlgorithm.html;
 	you have many agents - grass eaters on a field trying to eat as much grass as possible, competing with fellow agents;
 	they evolve their ability to eat as much grass as possible with genetic algorithm
-	
--project training_game_bot is part of my master thesis;
-	game like https://starapple.riddles.io/competitions/light-riders is implemented and bot for it is learned by Deep Reinforcement Learning;
-	thanks to http://outlace.com/rlpart3.html origninal skeleton for the DRL was made
