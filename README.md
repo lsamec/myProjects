@@ -1,10 +1,11 @@
-projects done in college period on FER, Zagreb
+projects done in university period
 
--project virtual_liga_kosarka was done by me and my team as a part of subject "Oblikovanje programske potpore";
-	it is a thing that is called Virtual League, of basketball, where people register and choose basketball players they want to "have" from various teams;
-	when chosen basketball players are good, registered players get points and compete with other;
-	Maven project, uses H2 database
+-virtual_liga_kosarka (by me and my team) - Virtual league basketball web application; uses Maven, Spring, JSP, Bootstrap, H2 database
 
--project grass_eaters was done as a part of undergraduate seminar; it is imitation of http://math.hws.edu/eck/jsdemo/jsGeneticAlgorithm.html;
-	you have many agents - grass eaters on a field trying to eat as much grass as possible, competing with fellow agents;
-	they evolve their ability to eat as much grass as possible with genetic algorithm
+-grass_eaters - Graphic demonstration of genetic algorithm; it is imitation of http://math.hws.edu/eck/jsdemo/jsGeneticAlgorithm.html
+
+
+
+	
+
+
