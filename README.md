@@ -8,8 +8,6 @@
 
 - SoundDigitClassifier - Spoken digits recognition using deep learning; uses Tensorflow, dataset from https://github.com/Jakobovski/free-spoken-digit-dataset
 
-- design_patterns - Design patterns course excercises
-
 
 
 
