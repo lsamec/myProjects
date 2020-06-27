@@ -1,13 +1,15 @@
-- virtual_liga_kosarka (by me and my team) - Virtual league basketball web application; uses Maven, Spring, JSP, Bootstrap, H2 database
+- virtual_liga_kosarka - virtual league basketball web application; uses Maven, Spring, JSP, Bootstrap, H2 database
+						(regards to my college team)
+						
+- grass_eaters - graphic demonstration of genetic algorithm; it is imitation of http://math.hws.edu/eck/jsdemo/jsGeneticAlgorithm.html
 
-- grass_eaters - Graphic demonstration of genetic algorithm; it is imitation of http://math.hws.edu/eck/jsdemo/jsGeneticAlgorithm.html
+- NSGA2 - multi-objective optimization genetic algorithm implementation; https://ieeexplore.ieee.org/document/996017
 
-- NSGA2 - Multi-objective optimization genetic algorithm implementation; https://ieeexplore.ieee.org/document/996017
+- dipl - deep reinforcement learning for simple computer game; uses Keras, game is imitation of https://docs.riddles.io/light-riders/rules
 
-- dipl - Deep reinforcement learning for simple computer game; uses Keras, game is imitation of https://docs.riddles.io/light-riders/rules
-
-- SoundDigitClassifier - Spoken digits recognition using deep learning; uses Tensorflow, dataset from https://github.com/Jakobovski/free-spoken-digit-dataset
-
+- SoundDigitClassifier - spoken digits recognition using deep learning; uses Tensorflow, dataset from https://github.com/Jakobovski/free-spoken-digit-dataset
+						(simple classification problem with preprocessing specific to audio analysis)
+						
 - competitive_informaitcs_tasks - solutions to problems from SPOJ, GeeksForGeeks etc. 
 								(my SPOJ profile https://www.spoj.com/users/lsamec/)
 
