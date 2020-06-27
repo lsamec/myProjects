@@ -8,7 +8,8 @@
 
 - SoundDigitClassifier - Spoken digits recognition using deep learning; uses Tensorflow, dataset from https://github.com/Jakobovski/free-spoken-digit-dataset
 
-- competitive_informaitcs_tasks - solutions to problems from SPOJ, GeeksForGeeks etc.
+- competitive_informaitcs_tasks - solutions to problems from SPOJ, GeeksForGeeks etc. 
+								(my SPOJ profile https://www.spoj.com/users/lsamec/)
 
 - LRWithNumGD - simple linear regression with numeric gradient descent
 
