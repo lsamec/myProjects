@@ -46,7 +46,7 @@ Interpolation vs. extrapolation?
 I claim that usually word extrapolation shouldn't be used.
 Lets imagine a dot of valid information in the middle of 2D information plane.
 As we move further from the dot the validity of information decreases proportionally to the distance we moved away from it.
-Now lets put another dot of information somewhere in the plain.
+Now, lets put another dot of information somewhere in the plain.
 The information of two dots constructively interferes.
 So, our best guess based on the amount of information we have is that on the line connecting these two dots.
 So, we guess the information value on the line between the dots and that can be called interpolation.
