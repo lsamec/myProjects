@@ -30,7 +30,7 @@ inquiry = "a b"
 #program start
 inquiryCounted = dict(collections.Counter(inquiry.split(" ")))
 
-#similarity between text and
+#similarity between text and inquiry
 textsSimilarities = {}
 
 for id in texts.keys():
