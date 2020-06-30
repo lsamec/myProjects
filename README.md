@@ -35,7 +35,7 @@ We can clearly see that first case includes second case (it includes it multiple
 therefore first case has bigger complexity than second case therefore they don't have the same complexity.
 
 So, conclusion is that finding an answer doesn't have the same complexity as checking an answer,
-therefore it is really true that P != NP
+therefore it is really true that P != NP as we have found one problem where P != NP
 
 This proof is valid only if the assumption at the beginning is true.
 
