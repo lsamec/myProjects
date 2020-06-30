@@ -17,6 +17,8 @@
 
 - recommender - simple recommender system
 
+- textRetrieval - simple text retrieval system
+
 
 My take on certain CS questions:
 
