@@ -22,22 +22,22 @@ My take on certain CS questions:
 
 Is P != NP ?
 
-The assumption is that P != NP can be boiled down to question whether finding an answer has same complexity
+The assumption is that P != NP can be boiled down to question whether finding an answer has the same complexity
 as checking whether the answer is right.
-Lets imagine a phonebook with only numbers without names. We want to find which answer belongs to Mark (only one answer belongs to Mark)
-For that we need to call every number in phonebook and see whether Mark will answer the call.
+Lets imagine a phone book with only numbers, without names. We want to find which answer belongs to Mark (only one answer belongs to Mark)
+For that we need to call every number in the phone book and see whether Mark will answer the call.
 That is the "finding an answer" case.
-Lets imagine that we have a number a want to check whether the answer belongs to mark.
+Lets imagine that we have a number and we want to check whether this number belongs to Mark.
 For that we need to call that number and see whether Mark will answer.
 That is the "checking the answer" case.
 
 We can clearly see that first case includes second case (it includes it multiple times)
-therefore first case has bigger complexity that second case therefore they don't have the same complexity.
+therefore first case has bigger complexity than second case therefore they don't have the same complexity.
 
-So, conclusion is that finding an answer doesn't have the same complexity as checking an answer
+So, conclusion is that finding an answer doesn't have the same complexity as checking an answer,
 therefore it is really true that P != NP
 
-This proof is valid if the assumption at the beginning is true.
+This proof is valid only if the assumption at the beginning is true.
 
 
 
