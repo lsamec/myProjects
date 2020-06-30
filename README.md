@@ -24,7 +24,7 @@ Is P != NP ?
 
 The assumption is that P != NP can be boiled down to question whether finding an answer has the same complexity
 as checking whether the answer is right.
-Lets imagine a phone book with only numbers, without names. We want to find which answer belongs to Mark (only one answer belongs to Mark)
+Lets imagine a phone book with only numbers, without names. We want to find which number belongs to Mark (only one answer belongs to Mark).
 For that we need to call every number in the phone book and see whether Mark will answer the call.
 That is the "finding an answer" case.
 Lets imagine that we have a number and we want to check whether this number belongs to Mark.
@@ -52,8 +52,8 @@ So, our best guess based on the amount of information we have is that on the lin
 So, we guess the information value on the line between the dots and that can be called interpolation.
 Only case when word extrapolation might be used is when we have only one dot and try to assume the information
 value around it. I claim that this case will never appear in real world. We always try to find more than one piece of information.
-Extrapolation cound be used when we are talking about deduction. 
-We could say that when we are deducing something we are moving away from the dot of information.
+Word extrapolation could be used when we are talking about deduction. 
+We could say that when we are deducing something, we are moving away from the dot of information.
 When there are at least two dots, information is always interfering and therefore I claim that interpolation is proper word for assuming information value in that case. 
  
 
