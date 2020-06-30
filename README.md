@@ -20,6 +20,9 @@
 - textRetrieval - simple text retrieval system
 
 
+My Medium page: https://medium.com/@leon.samec
+
+
 My take on certain CS questions:
 
 Is P != NP ?
