@@ -21,6 +21,7 @@
 
 - textClassification - simple text classification system
 
+- practiceCasino - simple slot machine simulation
 
 My Medium page: medium.com/@leon.samec
 
