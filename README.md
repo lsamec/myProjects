@@ -23,6 +23,8 @@
 
 - practiceCasino - simple slot machine simulation
 
+- keySafe - dummy prototype for using a smartphone as a key and a safe
+
 My Medium page: medium.com/@leon.samec
 
  
