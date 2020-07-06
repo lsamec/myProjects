@@ -25,6 +25,8 @@
 
 - keySafe - dummy prototype for using a smartphone as a key and a safe
 
+- trafficLights - model of traffic lights to run on Arduino UNO
+
 My Medium page: medium.com/@leon.samec
 
  
