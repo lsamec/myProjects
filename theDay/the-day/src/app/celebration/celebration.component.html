@@ -1,0 +1,11 @@
+<p-card [style]="{width: '70%'}" [hidden]="!show" styleClass="ui-card-shadow">
+    <div class="ui-g">
+        <div class="ui-g-3">
+            <p>Congratulation {{user}}, open your gift!</p>
+        </div>
+        <div class="ui-g-1">
+            <p-button label="Gift" (click)="openGift()"></p-button>
+        </div> 
+      </div>
+</p-card>
+

@@ -1,0 +1,43 @@
+<p-card title={{title}} [style]="{width: '100%'}" styleClass="ui-card-shadow">
+    <p-button label="+" (click)="showDialog()"></p-button>
+    <strong ><div #theday style="margin-left:100px"></div></strong>
+    <div>       
+        <ul style="list-style:none">
+            <li *ngFor="let user of users">
+                <div class="ui-g">
+                    <div class="ui-g-1">
+                        <p-card><strong>{{user}}</strong></p-card>
+                    </div>
+                    <div class="ui-g-1">
+                        <p-dropdown [options]="colors" [(ngModel)]="userColor[user]" optionLabel="name" (onChange)="changedColor(user, $event)"></p-dropdown>
+                    </div>
+                    <div class="ui-g-1">
+                        <button pButton style="margin-left:20px" type="button" label="Remove user" (click)="handleClickRemove(user)" class="ui-button-danger"></button>
+                    </div>
+                    <div class="ui-g-1">
+                        <button pButton style="margin-left:20px" type="button" label="Celebrate" (click)="handleClickCelebrate(user)" class="ui-button-success"></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</p-card>
+<app-celebration [user]="selectedUser" [show]="userIsSelected()" (openTheGift)="openTheGiftHandle($event)"></app-celebration>
+<p-dialog header="Gift number" [(visible)]="displayGiftDialog">
+    {{giftNumber}}
+</p-dialog>
+<p-dialog header="Add new user" [(visible)]="displayDialog">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+            <label for="name">User's name<br></label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="newUser" name="name" #name="ngModel">
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                User's name is required.
+            </div>
+            <div [hidden]="!userExists(newUser)" class="alert alert-danger">
+                There is already user with that name.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="(!userForm.form.valid) || userExists(newUser)">Submit</button>
+    </form>
+</p-dialog>

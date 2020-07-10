@@ -27,6 +27,8 @@
 
 - trafficLights - model of traffic lights to run on Arduino UNO
 
+- theDay - (a little bit silly) simple app made with Angular, Flask and MongoDB
+
 My Medium page: medium.com/@leon.samec
 
  
