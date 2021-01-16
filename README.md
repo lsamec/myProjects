@@ -29,6 +29,8 @@
 
 - theDay - (a little bit silly) simple app made with Angular, Flask and MongoDB
 
+- primesML - primes predictor
+
 My Medium page: medium.com/@leon.samec
 
  
